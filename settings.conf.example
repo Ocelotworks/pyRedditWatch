@@ -1,0 +1,32 @@
+#IRC Settings#
+
+[irc]
+#server address#
+server = irc.freenode.net
+
+#port#
+port = 6667
+
+#use SSL (True/False) !!CASE SENSITIVE!!#
+ssl = False
+
+#connect to ZNC (True/False) !!CASE SENSITIVE!!#
+isZNC = False
+
+#IRC nickname#
+nickname = botnickname
+
+#IRC username#
+username = botusername
+
+#IRC real name#
+realName = Bot Name
+
+#NickServ identify password#
+identPass = password
+
+#ZNC user password#
+zncPass = password
+
+#channels to join automaticaly, separated by ", "#
+channels = #yourchannel, #yourchannel2
