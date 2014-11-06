@@ -262,7 +262,7 @@ def processMessage(chanMessage, userMessage, channel):
         for check in runningChecks:
             sendMessage(channel, "/r/" + check)
 
-    if chanMessage == "!colour":
+    if chanMessage == "!color":
         try:
             subreddit = userMessage.split(' ')[1]
         except:
@@ -271,10 +271,10 @@ def processMessage(chanMessage, userMessage, channel):
         try:
             color = userMessage.split(' ')[2]
         except:
-            color = ""
+            color = str(random.randint(1, 15))
 
         if subreddit == "error":
-            sendMessage(channel, "Usage: !colour [subreddit] [new color]")
+            sendMessage(channel, "Usage: !color [subreddit] [new color]")
         else:
             if subreddit not in runningChecks:
                 sendMessage(channel, "Check not found.")
@@ -292,7 +292,7 @@ def processMessage(chanMessage, userMessage, channel):
                         os.remove("checks.txt")
                         os.rename("checkstemp.txt", "checks.txt")
     
-    if chanMessage == "!listcolours":
+    if chanMessage == "!listcolors":
         sendMessage(channel, listColors())
 
 loadChecks()
