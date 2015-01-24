@@ -26,14 +26,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reddit.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reddit.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reddit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38512763" vertical-offset="61" max-vertical-offset="5474">
+            <state vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="5474">
               <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
               <folding>
                 <element signature="e#18#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.038812786" vertical-offset="0" max-vertical-offset="876">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,6 +73,7 @@
         <option value="$PROJECT_DIR$/settings.conf" />
         <option value="$PROJECT_DIR$/settings.conf.example" />
         <option value="$PROJECT_DIR$/reddit.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -563,11 +574,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reddit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38512763" vertical-offset="61" max-vertical-offset="5474">
+        <state vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="5474">
           <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
           <folding>
             <element signature="e#18#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.038812786" vertical-offset="0" max-vertical-offset="876">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
