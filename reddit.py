@@ -35,8 +35,8 @@ username = str(confParser.get('irc', 'username'))
 realName = str(confParser.get('irc', 'realName'))
 identPass = str(confParser.get('irc', 'identPass'))
 zncPass = str(confParser.get('irc', 'zncPass'))
-
 channels = str(confParser.get('irc', 'channels'))
+
 
 if server == "":
     print "====No server set. Defaulting to freenode.===="
@@ -87,8 +87,11 @@ irc.recv(8192)
 
 irc.send("PRIVMSG nickserv :IDENTIFY " + username + " " + identPass)
 
+time.sleep(1);
+print channels.split(", ")
 for chan in channels.split(", "):
     irc.send('JOIN ' + chan + '\r\n')
+    time.sleep(1)
 
 noColor = "\x03"
 checkFile = open('checks.txt', 'r+')
