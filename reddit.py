@@ -74,18 +74,19 @@ except Exception as e:
     print "Bad hostname or port: " + server + ":" + str(port)
 
 if isZNC == True:
-    irc.write('PASS ' + zncPass + '\r\n')
-    irc.write('NICK ' + nickname + '\r\n')
-    irc.write('USER ' + username + ' ' + nickname + ' ' + nickname + ' ' + nickname + ':' + realName +'\r\n')
+    irc.write('PASS %s\r\n' % zncPass)
+    irc.write('NICK %s\r\n' % nickname)
+    irc.send('USER %s %s %s %s:%s\r\n' % (username, nickname, nickname, nickname, realName))
 else:
     time.sleep(1)
-    irc.send('NICK ' + nickname + '\r\n')
-    irc.send('USER ' + username + ' ' + nickname + ' ' + nickname + ' ' + nickname + ':' + realName +'\r\n')
+    irc.send('NICK %s\r\n' % nickname)
+    irc.send('USER %s %s %s %s:%s\r\n' % (username, nickname, nickname, nickname, realName))
 
 time.sleep(1)
 irc.recv(8192)
 
-irc.send("PRIVMSG nickserv :IDENTIFY " + username + " " + identPass)
+identString = "PRIVMSG NickServ :IDENTIFY %s %s\r\n" % (username, identPass)
+irc.send(identString)
 
 time.sleep(1)
 chanlist = channels.split(", ")
