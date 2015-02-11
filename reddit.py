@@ -76,7 +76,7 @@ except Exception as e:
 if isZNC == True:
     irc.write('PASS %s\r\n' % zncPass)
     irc.write('NICK %s\r\n' % nickname)
-    irc.send('USER %s %s %s %s:%s\r\n' % (username, nickname, nickname, nickname, realName))
+    irc.write('USER %s %s %s %s:%s\r\n' % (username, nickname, nickname, nickname, realName))
 else:
     time.sleep(1)
     irc.send('NICK %s\r\n' % nickname)
