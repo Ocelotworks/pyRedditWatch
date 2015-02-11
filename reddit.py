@@ -87,12 +87,15 @@ irc.recv(8192)
 
 irc.send("PRIVMSG nickserv :IDENTIFY " + username + " " + identPass)
 
-time.sleep(5)
+time.sleep(1)
 chanlist = channels.split(", ")
+
 for chan in chanlist:
-    irc.send('JOIN ' + chan + '\r\n')
-    time.sleep(1)
-irc.send('JOIN ' + channels + '\r\n')
+    joinString = "JOIN %s \r\n" % str(chan)
+    irc.send(joinString)
+    irc.write(joinString)
+    
+time.sleep(1)
 
 noColor = "\x03"
 checkFile = open('checks.txt', 'r+')
