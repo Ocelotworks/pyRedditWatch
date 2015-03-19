@@ -198,6 +198,7 @@ def checkNew(subreddit, color, delay, channel):
                 title = unidecode.unidecode(title)
                 message = textColor + "/r/" + subreddit + noColor + " - " + title + " (http://redd.it/" + shortID + ")" + shortUrl
                 sendMessage(channel, message)
+                time.sleep(1)
 
 def randomColor(color):
     if color in colorDict:
